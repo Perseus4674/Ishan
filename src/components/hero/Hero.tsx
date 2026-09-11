@@ -31,10 +31,9 @@ export function Hero() {
           </p>
 
           <p className="mt-6 leading-relaxed text-muted">
-            i build AI systems that keep their memory instead of losing it the
-            moment you close the tab — a third-year CS student at Manipal
-            University Jaipur, specialising in data science, currently building
-            Talos and looking for what&rsquo;s next.
+            a third-year CS student at Manipal University Jaipur, specialising
+            in data science, currently building Talos and looking for
+            what&rsquo;s next.
           </p>
 
           <div className="mt-9">
