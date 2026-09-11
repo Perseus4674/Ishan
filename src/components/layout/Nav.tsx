@@ -80,7 +80,7 @@ export function Nav() {
           onClick={() => setMobileOpen(true)}
           aria-expanded={mobileOpen}
           aria-controls="mobile-nav"
-          aria-label="open menu"
+          aria-label="Open menu"
           className="flex h-10 w-10 items-center justify-center rounded text-head md:hidden"
         >
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" className="h-6 w-6" aria-hidden="true">

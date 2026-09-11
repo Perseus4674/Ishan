@@ -70,12 +70,12 @@ export function MobileNav({ open, onClose, activeId }: MobileNavProps) {
       className="fixed inset-0 z-[60] bg-void md:hidden"
     >
       <div className="content-width flex h-16 items-center justify-between px-4 sm:px-6">
-        <span className="text-sm font-semibold text-head">menu</span>
+        <span className="text-sm font-semibold text-head">Menu</span>
         <button
           ref={closeButtonRef}
           type="button"
           onClick={onClose}
-          aria-label="close menu"
+          aria-label="Close menu"
           className="flex h-10 w-10 items-center justify-center rounded text-head"
         >
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" className="h-6 w-6" aria-hidden="true">
