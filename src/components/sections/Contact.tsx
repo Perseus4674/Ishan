@@ -17,7 +17,7 @@ export function Contact() {
         </p>
         <a
           href={`mailto:${profile.links.email}`}
-          className="mt-8 inline-flex items-center rounded-full bg-mint px-8 py-4 text-base font-medium text-bg transition-transform hover:scale-[1.03] motion-reduce:hover:scale-100"
+          className="mt-8 inline-flex items-center rounded-full bg-amber px-8 py-4 text-base font-medium text-void transition-transform hover:scale-[1.03] motion-reduce:hover:scale-100"
         >
           say hi
         </a>

@@ -68,7 +68,7 @@ export function Now() {
                 onClick={() => setActiveIndex(index)}
                 className={`shrink-0 whitespace-nowrap border-b-2 px-3 py-2 text-left font-mono text-sm transition-colors md:border-b-0 md:border-l-2 md:px-4 md:py-2.5 ${
                   isActive
-                    ? "border-mint text-mint"
+                    ? "border-amber text-amber"
                     : "border-line text-muted hover:text-text"
                 }`}
               >

@@ -39,7 +39,7 @@ export function ProjectsArchive() {
               onClick={() => toggleTag(tag)}
               className={`rounded-full border px-3 py-1.5 font-mono text-xs transition-colors ${
                 isActive
-                  ? "border-mint bg-mint/10 text-mint"
+                  ? "border-amber bg-amber/10 text-amber"
                   : "border-line-2 text-muted hover:text-text"
               }`}
             >
@@ -70,7 +70,7 @@ export function ProjectsArchive() {
                 {project.name}
               </h3>
               {project.featured && (
-                <span className="mt-1 inline-block font-mono text-[11px] text-mint">
+                <span className="mt-1 inline-block font-mono text-[11px] text-amber">
                   featured
                 </span>
               )}
@@ -89,7 +89,7 @@ export function ProjectsArchive() {
                   href={project.repo}
                   target="_blank"
                   rel="noreferrer"
-                  className="text-sm text-mint hover:underline"
+                  className="text-sm text-amber hover:underline"
                 >
                   view repo
                 </a>

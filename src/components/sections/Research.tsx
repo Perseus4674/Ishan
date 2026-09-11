@@ -7,7 +7,7 @@ export function Research() {
       <SectionHeading id="research-heading">research</SectionHeading>
 
       <article className="rounded-xl border border-line bg-panel p-6 sm:p-8 md:p-10">
-        <span className="mb-3 inline-block w-fit rounded-full border border-gold/40 px-3 py-1 font-mono text-xs text-gold">
+        <span className="mb-3 inline-block w-fit rounded-full border border-line-2 px-3 py-1 font-mono text-xs text-head">
           {research.status}
         </span>
 
@@ -20,7 +20,7 @@ export function Research() {
         <ul className="mt-5 space-y-2">
           {research.points.map((point) => (
             <li key={point} className="flex gap-3 text-sm leading-relaxed text-muted">
-              <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-mint" aria-hidden="true" />
+              <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-amber" aria-hidden="true" />
               {point}
             </li>
           ))}

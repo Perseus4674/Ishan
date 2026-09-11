@@ -20,7 +20,7 @@ export default function OpengraphImage() {
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
-          background: "#080d14",
+          background: "#05060b",
           position: "relative",
         }}
       >
@@ -34,7 +34,7 @@ export default function OpengraphImage() {
               width: 3,
               height: 3,
               borderRadius: "50%",
-              background: "#d3deea",
+              background: "#c8cedf",
               opacity: 0.5,
             }}
           />
@@ -44,7 +44,7 @@ export default function OpengraphImage() {
           style={{
             width: 22,
             height: 22,
-            background: "#5ce1c8",
+            background: "#e4b363",
             borderRadius: 5,
             transform: "rotate(45deg)",
             marginBottom: 36,
@@ -56,7 +56,7 @@ export default function OpengraphImage() {
             display: "flex",
             fontSize: 72,
             fontWeight: 700,
-            color: "#eaf2fa",
+            color: "#f2f4fb",
             letterSpacing: -1,
           }}
         >
@@ -68,7 +68,7 @@ export default function OpengraphImage() {
             display: "flex",
             marginTop: 20,
             fontSize: 30,
-            color: "#8496aa",
+            color: "#8189a3",
           }}
         >
           systems that remember

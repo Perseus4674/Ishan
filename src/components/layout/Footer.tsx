@@ -13,7 +13,7 @@ export function Footer() {
             target="_blank"
             rel="noreferrer"
             aria-label="Ishan's GitHub"
-            className="hover:text-mint"
+            className="hover:text-amber"
           >
             <GithubIcon className="h-4 w-4" />
           </a>
@@ -22,14 +22,14 @@ export function Footer() {
             target="_blank"
             rel="noreferrer"
             aria-label="Ishan's LinkedIn"
-            className="hover:text-mint"
+            className="hover:text-amber"
           >
             <LinkedinIcon className="h-4 w-4" />
           </a>
           <a
             href={`mailto:${profile.links.email}`}
             aria-label="Email Ishan"
-            className="hover:text-mint"
+            className="hover:text-amber"
           >
             <MailIcon className="h-4 w-4" />
           </a>

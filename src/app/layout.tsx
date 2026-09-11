@@ -56,7 +56,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#080d14",
+  themeColor: "#05060b",
   width: "device-width",
   initialScale: 1,
 };
@@ -68,7 +68,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${spaceGrotesk.variable} ${inter.variable} ${jetbrainsMono.variable}`}>
-      <body className="bg-bg text-text antialiased">
+      <body className="bg-void text-text antialiased">
         <SkipLink />
         <Nav />
         <main id="main-content" tabIndex={-1}>

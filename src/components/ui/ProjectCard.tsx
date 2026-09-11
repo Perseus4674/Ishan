@@ -19,7 +19,7 @@ export function ProjectCard({ project }: { project: Project }) {
             href={project.repo}
             target="_blank"
             rel="noreferrer"
-            className="text-sm text-mint hover:underline"
+            className="text-sm text-amber hover:underline"
           >
             view repo
           </a>

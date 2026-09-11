@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function ProjectsPage() {
   return (
     <div className="content-width px-4 py-16 sm:px-6 sm:py-20">
-      <Link href="/#systems" className="text-sm text-mint hover:underline">
+      <Link href="/#systems" className="text-sm text-amber hover:underline">
         back home
       </Link>
 

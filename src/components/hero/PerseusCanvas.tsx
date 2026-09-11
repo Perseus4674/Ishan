@@ -37,6 +37,15 @@ function magToAlpha(mag: number) {
   return Math.min(1, Math.max(0.45, 1.15 - mag * 0.14));
 }
 
+// Brightest stars burn warm white, faint ones settle toward pale amber.
+function magToTint(mag: number) {
+  const t = Math.min(1, Math.max(0, (mag - 1.79) / 2.57));
+  const r = Math.round(255 - 23 * t);
+  const g = Math.round(248 - 55 * t);
+  const b = Math.round(235 - 95 * t);
+  return `${r}, ${g}, ${b}`;
+}
+
 export function PerseusCanvas() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -139,14 +148,14 @@ export function PerseusCanvas() {
           ? 0.55
           : 0.35 + 0.35 * (0.5 + 0.5 * Math.sin(elapsedSec * d.speed + d.phase));
         ctx.beginPath();
-        ctx.fillStyle = `rgba(211, 222, 234, ${twinkle.toFixed(3)})`;
+        ctx.fillStyle = `rgba(200, 206, 223, ${twinkle.toFixed(3)})`;
         ctx.arc(d.nx * width, d.ny * height, d.r, 0, Math.PI * 2);
         ctx.fill();
       });
       ctx.restore();
 
       ctx.save();
-      ctx.strokeStyle = "rgba(92, 225, 200, 0.35)";
+      ctx.strokeStyle = "rgba(228, 179, 99, 0.18)";
       ctx.lineWidth = 1;
       edgePairs.forEach(([a, b]) => {
         const sa = stars[a];
@@ -162,6 +171,8 @@ export function PerseusCanvas() {
         const radius = magToRadius(star.mag);
         const alpha = magToAlpha(star.mag);
 
+        const tint = magToTint(star.mag);
+
         const glow = ctx.createRadialGradient(
           star.x,
           star.y,
@@ -170,14 +181,14 @@ export function PerseusCanvas() {
           star.y,
           radius * 4
         );
-        glow.addColorStop(0, `rgba(234, 242, 250, ${alpha * 0.5})`);
-        glow.addColorStop(1, "rgba(234, 242, 250, 0)");
+        glow.addColorStop(0, `rgba(${tint}, ${alpha * 0.5})`);
+        glow.addColorStop(1, `rgba(${tint}, 0)`);
         ctx.fillStyle = glow;
         ctx.beginPath();
         ctx.arc(star.x, star.y, radius * 4, 0, Math.PI * 2);
         ctx.fill();
 
-        ctx.fillStyle = `rgba(234, 242, 250, ${alpha})`;
+        ctx.fillStyle = `rgba(${tint}, ${alpha})`;
         ctx.beginPath();
         ctx.arc(star.x, star.y, radius, 0, Math.PI * 2);
         ctx.fill();

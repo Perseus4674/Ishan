@@ -27,7 +27,7 @@ export function Hero() {
           hi, Ishan here.
           <span
             aria-hidden="true"
-            className="ml-1 inline-block h-[0.9em] w-[3px] translate-y-1 animate-[blink_1s_step-end_infinite] bg-mint align-middle"
+            className="ml-1 inline-block h-[0.9em] w-[3px] translate-y-1 animate-[blink_1s_step-end_infinite] bg-amber align-middle"
           />
         </h1>
 
@@ -41,7 +41,7 @@ export function Hero() {
         <div className="mt-8">
           <a
             href={`mailto:${profile.links.email}`}
-            className="inline-flex items-center rounded-full bg-mint px-6 py-3 text-sm font-medium text-bg transition-transform hover:scale-[1.03] motion-reduce:hover:scale-100"
+            className="inline-flex items-center rounded-full bg-amber px-6 py-3 text-sm font-medium text-void transition-transform hover:scale-[1.03] motion-reduce:hover:scale-100"
           >
             say hi
           </a>
