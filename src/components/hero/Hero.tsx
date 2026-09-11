@@ -24,7 +24,7 @@ export function Hero() {
         className="order-2 md:order-none"
       >
         <h1 className="font-heading text-4xl font-semibold text-head sm:text-5xl">
-          hi, ishan here.
+          hi, Ishan here.
           <span
             aria-hidden="true"
             className="ml-1 inline-block h-[0.9em] w-[3px] translate-y-1 animate-[blink_1s_step-end_infinite] bg-mint align-middle"

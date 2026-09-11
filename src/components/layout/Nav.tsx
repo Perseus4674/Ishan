@@ -23,7 +23,7 @@ export function Nav() {
           href="/#hero"
           className="font-heading text-sm font-semibold tracking-wide text-head"
         >
-          ishan jain
+          Ishan Jain
         </Link>
 
         <nav aria-label="primary" className="hidden items-center gap-6 md:flex">
@@ -51,7 +51,7 @@ export function Nav() {
               href={profile.links.github}
               target="_blank"
               rel="noreferrer"
-              aria-label="ishan's github"
+              aria-label="Ishan's GitHub"
               className="text-muted transition-colors hover:text-mint"
             >
               <GithubIcon className="h-5 w-5" />
@@ -60,14 +60,14 @@ export function Nav() {
               href={profile.links.linkedin}
               target="_blank"
               rel="noreferrer"
-              aria-label="ishan's linkedin"
+              aria-label="Ishan's LinkedIn"
               className="text-muted transition-colors hover:text-mint"
             >
               <LinkedinIcon className="h-5 w-5" />
             </a>
             <a
               href={`mailto:${profile.links.email}`}
-              aria-label="email ishan"
+              aria-label="Email Ishan"
               className="text-muted transition-colors hover:text-mint"
             >
               <MailIcon className="h-5 w-5" />

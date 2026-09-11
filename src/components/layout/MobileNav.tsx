@@ -110,7 +110,7 @@ export function MobileNav({ open, onClose, activeId }: MobileNavProps) {
             href={profile.links.github}
             target="_blank"
             rel="noreferrer"
-            aria-label="ishan's github"
+            aria-label="Ishan's GitHub"
             className="text-muted hover:text-mint"
           >
             <GithubIcon className="h-6 w-6" />
@@ -119,14 +119,14 @@ export function MobileNav({ open, onClose, activeId }: MobileNavProps) {
             href={profile.links.linkedin}
             target="_blank"
             rel="noreferrer"
-            aria-label="ishan's linkedin"
+            aria-label="Ishan's LinkedIn"
             className="text-muted hover:text-mint"
           >
             <LinkedinIcon className="h-6 w-6" />
           </a>
           <a
             href={`mailto:${profile.links.email}`}
-            aria-label="email ishan"
+            aria-label="Email Ishan"
             className="text-muted hover:text-mint"
           >
             <MailIcon className="h-6 w-6" />

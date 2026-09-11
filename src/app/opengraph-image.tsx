@@ -60,7 +60,7 @@ export default function OpengraphImage() {
             letterSpacing: -1,
           }}
         >
-          ishan jain
+          Ishan Jain
         </div>
 
         <div

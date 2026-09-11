@@ -33,23 +33,23 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "ishan jain — systems that remember",
-    template: "%s · ishan jain",
+    default: "Ishan Jain — systems that remember",
+    template: "%s · Ishan Jain",
   },
   description:
     "Ishan Jain builds AI systems with real memory — Talos, a self-hosted AI operating system, plus ML, research, and full-stack freelance work. CS student at Manipal University Jaipur.",
   authors: [{ name: "Ishan Jain", url: "https://github.com/Perseus4674" }],
   openGraph: {
-    title: "ishan jain — systems that remember",
+    title: "Ishan Jain — systems that remember",
     description:
       "Talos, a self-hosted AI operating system, plus ML, research, and full-stack freelance work.",
     url: "/",
-    siteName: "ishan jain",
+    siteName: "Ishan Jain",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "ishan jain — systems that remember",
+    title: "Ishan Jain — systems that remember",
     description:
       "Talos, a self-hosted AI operating system, plus ML, research, and full-stack freelance work.",
   },
