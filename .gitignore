@@ -25,6 +25,9 @@
 *.pem
 .idea/
 
+# screenshots kept in the project root (leading slash = root only, public/ unaffected)
+/*.png
+
 # debug
 npm-debug.log*
 yarn-debug.log*
