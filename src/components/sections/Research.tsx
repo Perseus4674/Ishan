@@ -1,4 +1,5 @@
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { BulletList } from "@/components/ui/BulletList";
 import { research } from "@/content/research";
 
 export function Research() {
@@ -17,14 +18,7 @@ export function Research() {
 
         <p className="mt-4 max-w-prose leading-relaxed text-text">{research.blurb}</p>
 
-        <ul className="mt-5 space-y-2">
-          {research.points.map((point) => (
-            <li key={point} className="flex gap-3 text-sm leading-relaxed text-muted">
-              <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-amber" aria-hidden="true" />
-              {point}
-            </li>
-          ))}
-        </ul>
+        <BulletList items={research.points} className="mt-5" />
 
         <ul className="mt-6 flex flex-wrap gap-x-4 gap-y-1 font-mono text-xs text-muted">
           {research.stack.map((tech) => (
