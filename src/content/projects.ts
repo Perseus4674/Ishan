@@ -17,12 +17,12 @@ export const talos: Project = {
   stack: ["Python", "ChromaDB", "SQLite", "Textual", "Streamlit", "EdgeTTS"],
   repo: "https://github.com/Perseus4674/Talos-AI-Os-showcase",
   featured: true,
-  ascii: `talos — self-hosted, always on
+  ascii: `talos - self-hosted, always on
 
-terminal hud ─┐
-              ├─► orchestrator ──► memory
-web dashboard ┘     tools           chroma + sqlite
-                    gpt-4o-mini     survives restart`,
+terminal hud   \\
+                 >-- orchestrator --> memory
+web dashboard  /     tools            chroma + sqlite
+                     gpt-4o-mini      survives restart`,
 };
 
 export const projects: Project[] = [
