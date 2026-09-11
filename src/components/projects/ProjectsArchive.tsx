@@ -53,7 +53,7 @@ export function ProjectsArchive() {
             onClick={() => setActiveTags([])}
             className="rounded-full px-3 py-1.5 text-xs text-muted hover:text-text"
           >
-            clear
+            Clear
           </button>
         )}
       </div>
@@ -71,7 +71,7 @@ export function ProjectsArchive() {
               </h3>
               {project.featured && (
                 <span className="mt-1 inline-block text-[11px] text-amber">
-                  featured
+                  Featured
                 </span>
               )}
             </div>
@@ -91,10 +91,10 @@ export function ProjectsArchive() {
                   rel="noreferrer"
                   className="text-sm text-amber hover:underline"
                 >
-                  view repo
+                  View repo
                 </a>
               ) : (
-                <StatusFlag label={project.status ?? "no public repo"} />
+                <StatusFlag label={project.status ?? "No public repo"} />
               )}
             </div>
           </li>
@@ -102,7 +102,7 @@ export function ProjectsArchive() {
       </ul>
 
       {visibleProjects.length === 0 && (
-        <p className="mt-8 text-sm text-muted">nothing matches that filter.</p>
+        <p className="mt-8 text-sm text-muted">Nothing matches that filter.</p>
       )}
     </div>
   );

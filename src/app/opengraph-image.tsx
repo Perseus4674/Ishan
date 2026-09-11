@@ -71,7 +71,7 @@ export default function OpengraphImage() {
             color: "#8189a3",
           }}
         >
-          systems that remember
+          Systems that remember
         </div>
       </div>
     ),

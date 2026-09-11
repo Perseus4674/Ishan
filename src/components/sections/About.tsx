@@ -16,7 +16,7 @@ export function About() {
 
           <div className="mt-10">
             <h3 className="mb-4 text-xs text-muted">
-              core stack
+              Core stack
             </h3>
             <div className="grid grid-cols-2 gap-x-8 gap-y-2 max-w-sm">
               {aboutCopy.coreTech.map((column, i) => (
@@ -34,7 +34,7 @@ export function About() {
 
         <aside className="rounded-lg border border-line bg-panel p-6">
           <h3 className="mb-4 text-sm font-semibold text-head">
-            at a glance
+            At a glance
           </h3>
           <dl className="space-y-4">
             {aboutCopy.atAGlance.map((item) => (

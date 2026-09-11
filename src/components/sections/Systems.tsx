@@ -19,7 +19,7 @@ export function Systems() {
 
       <div className="mt-8">
         <Link href="/projects" className="text-sm text-amber hover:underline">
-          view all projects
+          View all projects
         </Link>
       </div>
     </section>

@@ -26,7 +26,7 @@ export function ProjectCard({ project }: { project: Project }) {
           </a>
         ) : (
           <span className="shrink-0 text-xs text-muted">
-            {project.status ?? "no public repo"}
+            {project.status ?? "No public repo"}
           </span>
         )}
       </div>

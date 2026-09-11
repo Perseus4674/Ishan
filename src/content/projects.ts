@@ -49,7 +49,7 @@ export const projects: Project[] = [
     blurb:
       "A research assistant for Indian equities. The first build was a monolith that collapsed under dependency conflicts; this one isolates every service, with four validation layers before any claim reaches the user. Ticker resolution built for Indian listings first.",
     stack: ["FastAPI", "LangChain", "ChromaDB", "Groq"],
-    status: "in progress",
+    status: "In progress",
   },
   {
     slug: "made-to-order-commerce",
@@ -57,7 +57,7 @@ export const projects: Project[] = [
     blurb:
       "Storefronts for craft businesses whose stock is produced rather than held, which breaks most off-the-shelf e-commerce assumptions. Admin panels built for owners who have never used one. Full source handed over, no lock-in. Case studies go up when the sites do.",
     stack: ["Next.js", "TypeScript", "Prisma", "PostgreSQL", "Auth.js"],
-    status: "two builds",
+    status: "Two builds",
   },
   {
     slug: "exoscout",

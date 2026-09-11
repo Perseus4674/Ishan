@@ -31,7 +31,7 @@ export function Hero() {
           </p>
 
           <p className="mt-6 leading-relaxed text-muted">
-            a third-year CS student at Manipal University Jaipur, specialising
+            A third-year CS student at Manipal University Jaipur, specialising
             in data science, currently building Talos and looking for
             what&rsquo;s next.
           </p>
@@ -41,7 +41,7 @@ export function Hero() {
               href={`mailto:${profile.links.email}`}
               className="inline-flex items-center rounded-full border border-amber px-6 py-2.5 text-sm text-amber transition-colors hover:bg-amber hover:text-void"
             >
-              say hi
+              Say hi
             </a>
           </div>
         </motion.div>

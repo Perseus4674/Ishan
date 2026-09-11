@@ -5,7 +5,7 @@ export function FeaturedCard({ project }: { project: Project }) {
     <article className="grid gap-8 overflow-hidden rounded-xl border border-line bg-panel p-6 sm:p-8 md:grid-cols-2 md:gap-10 md:p-10">
       <div className="flex flex-col">
         <span className="mb-3 w-fit rounded-full border border-amber/40 px-3 py-1 text-xs text-amber">
-          featured
+          Featured
         </span>
         <h3 className="text-2xl font-semibold text-head">{project.name}</h3>
         <p className="mt-4 leading-relaxed text-text">{project.blurb}</p>
@@ -23,7 +23,7 @@ export function FeaturedCard({ project }: { project: Project }) {
             rel="noreferrer"
             className="mt-6 w-fit text-sm text-amber hover:underline"
           >
-            view showcase repo
+            View showcase repo
           </a>
         )}
       </div>
