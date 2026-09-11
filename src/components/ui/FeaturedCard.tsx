@@ -3,7 +3,7 @@ import type { Project } from "@/content/projects";
 export function FeaturedCard({ project }: { project: Project }) {
   return (
     <article className="grid gap-8 overflow-hidden rounded-xl border border-line bg-panel p-6 sm:p-8 md:grid-cols-2 md:gap-10 md:p-10">
-      <div className="flex flex-col">
+      <div className="flex min-w-0 flex-col">
         <span className="mb-3 w-fit rounded-full border border-amber/40 px-3 py-1 text-xs text-amber">
           Featured
         </span>
@@ -28,7 +28,7 @@ export function FeaturedCard({ project }: { project: Project }) {
         )}
       </div>
 
-      <div className="flex items-center justify-center rounded-lg border border-line bg-[radial-gradient(circle_at_30%_20%,rgba(228,179,99,0.10),transparent_70%)] bg-deep p-6">
+      <div className="flex min-w-0 items-center justify-center rounded-lg border border-line bg-[radial-gradient(circle_at_30%_20%,rgba(228,179,99,0.10),transparent_70%)] bg-deep p-6">
         <pre className="overflow-x-auto font-mono text-[11px] leading-relaxed text-muted sm:text-xs">
           {project.ascii}
         </pre>
