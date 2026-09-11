@@ -5,10 +5,13 @@ import { research } from "@/content/research";
 export function Research() {
   return (
     <section id="research" aria-labelledby="research-heading">
-      <div className="content-width px-4 py-20 sm:px-6">
+      {/* Shorter band padding than its neighbours: this section's content is a
+          single padded card, so the card's own inset already supplies the air
+          that other sections get from py-20. */}
+      <div className="content-width px-4 py-14 sm:px-6">
         <SectionHeading id="research-heading">Research</SectionHeading>
 
-        <article className="rounded-xl border border-line bg-panel p-6 sm:p-8 md:p-10">
+        <article className="rounded-xl border border-line bg-panel p-6 sm:p-8">
           <span className="mb-3 inline-block w-fit rounded-full border border-line-2 px-3 py-1 text-xs text-head">
             {research.status}
           </span>
