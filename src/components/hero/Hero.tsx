@@ -39,7 +39,7 @@ export function Hero() {
           <div className="mt-9">
             <a
               href={`mailto:${profile.links.email}`}
-              className="inline-flex items-center rounded-full border border-amber px-6 py-2.5 text-sm text-amber transition-colors hover:bg-amber hover:text-void"
+              className="inline-flex items-center rounded-full border border-line-2 px-6 py-2.5 text-sm text-amber transition-colors hover:border-amber"
             >
               Say hi
             </a>
