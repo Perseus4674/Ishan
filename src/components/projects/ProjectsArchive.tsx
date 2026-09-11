@@ -1,0 +1,109 @@
+"use client";
+
+import { useMemo, useState } from "react";
+import { projects } from "@/content/projects";
+import { StatusFlag } from "@/components/ui/StatusFlag";
+
+export function ProjectsArchive() {
+  const allTags = useMemo(() => {
+    const tags = new Set<string>();
+    projects.forEach((project) => project.stack.forEach((tech) => tags.add(tech)));
+    return Array.from(tags).sort();
+  }, []);
+
+  const [activeTags, setActiveTags] = useState<string[]>([]);
+
+  const visibleProjects = useMemo(() => {
+    if (activeTags.length === 0) return projects;
+    return projects.filter((project) =>
+      project.stack.some((tech) => activeTags.includes(tech))
+    );
+  }, [activeTags]);
+
+  function toggleTag(tag: string) {
+    setActiveTags((current) =>
+      current.includes(tag) ? current.filter((t) => t !== tag) : [...current, tag]
+    );
+  }
+
+  return (
+    <div>
+      <div role="group" aria-label="filter projects by stack" className="flex flex-wrap gap-2">
+        {allTags.map((tag) => {
+          const isActive = activeTags.includes(tag);
+          return (
+            <button
+              key={tag}
+              type="button"
+              aria-pressed={isActive}
+              onClick={() => toggleTag(tag)}
+              className={`rounded-full border px-3 py-1.5 font-mono text-xs transition-colors ${
+                isActive
+                  ? "border-mint bg-mint/10 text-mint"
+                  : "border-line-2 text-muted hover:text-text"
+              }`}
+            >
+              {tag}
+            </button>
+          );
+        })}
+        {activeTags.length > 0 && (
+          <button
+            type="button"
+            onClick={() => setActiveTags([])}
+            className="rounded-full px-3 py-1.5 font-mono text-xs text-dim hover:text-text"
+          >
+            clear
+          </button>
+        )}
+      </div>
+
+      <p aria-live="polite" className="mt-4 font-mono text-xs text-dim">
+        {visibleProjects.length} of {projects.length} projects
+      </p>
+
+      <ul className="mt-6 divide-y divide-line border-y border-line">
+        {visibleProjects.map((project) => (
+          <li key={project.slug} className="flex flex-col gap-3 py-6 sm:flex-row sm:items-start sm:gap-8">
+            <div className="sm:w-48 sm:flex-shrink-0">
+              <h3 className="font-heading text-base font-semibold text-head">
+                {project.name}
+              </h3>
+              {project.featured && (
+                <span className="mt-1 inline-block font-mono text-[11px] text-mint">
+                  featured
+                </span>
+              )}
+            </div>
+
+            <p className="flex-1 text-sm leading-relaxed text-muted">{project.blurb}</p>
+
+            <div className="flex flex-col items-start gap-2 sm:w-40 sm:flex-shrink-0 sm:items-end">
+              <ul className="flex flex-wrap gap-x-2 gap-y-1 font-mono text-[11px] text-dim sm:justify-end">
+                {project.stack.map((tech) => (
+                  <li key={tech}>{tech}</li>
+                ))}
+              </ul>
+              {project.repo ? (
+                <a
+                  href={project.repo}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-sm text-mint hover:underline"
+                >
+                  view repo
+                </a>
+              ) : (
+                <StatusFlag label={project.status ?? "no public repo"} />
+              )}
+            </div>
+          </li>
+        ))}
+      </ul>
+
+      {visibleProjects.length === 0 && (
+        <p className="mt-8 text-sm text-muted">nothing matches that filter.</p>
+      )}
+    </div>
+  );
+}

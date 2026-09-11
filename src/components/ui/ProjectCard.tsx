@@ -24,7 +24,7 @@ export function ProjectCard({ project }: { project: Project }) {
             view repo
           </a>
         ) : (
-          <StatusFlag label={project.status ?? "private"} />
+          <StatusFlag label={project.status ?? "no public repo"} />
         )}
       </div>
     </article>
