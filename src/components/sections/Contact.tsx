@@ -7,7 +7,7 @@ export function Contact() {
       <div className="content-width px-4 py-20 sm:px-6">
         <SectionHeading id="contact-heading">Contact</SectionHeading>
 
-        <div className="mx-auto max-w-md text-center">
+        <div className="max-w-xl">
           <h3 className="text-2xl font-semibold text-head sm:text-3xl">
             Got something worth building?
           </h3>
