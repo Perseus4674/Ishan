@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from "react";
 import { projects } from "@/content/projects";
-import { StatusFlag } from "@/components/ui/StatusFlag";
+import { GithubIcon } from "@/components/ui/SocialIcons";
 
 export function ProjectsArchive() {
   const allTags = useMemo(() => {
@@ -64,37 +64,41 @@ export function ProjectsArchive() {
 
       <ul className="mt-6 divide-y divide-line border-y border-line">
         {visibleProjects.map((project) => (
-          <li key={project.slug} className="flex flex-col gap-3 py-6 sm:flex-row sm:items-start sm:gap-8">
-            <div className="sm:w-48 sm:flex-shrink-0">
+          <li key={project.slug} className="py-8">
+            <div className="flex items-baseline gap-3">
               <h3 className="text-base font-semibold text-head">
                 {project.name}
               </h3>
               {project.featured && (
-                <span className="mt-1 inline-block text-[11px] text-amber">
-                  Featured
-                </span>
+                <span className="text-[11px] text-amber">Featured</span>
               )}
             </div>
 
-            <p className="flex-1 text-sm leading-relaxed text-muted">{project.blurb}</p>
+            <p className="mt-2 max-w-prose text-sm leading-relaxed text-muted">
+              {project.blurb}
+            </p>
 
-            <div className="flex flex-col items-start gap-2 sm:w-40 sm:flex-shrink-0 sm:items-end">
-              <ul className="flex flex-wrap gap-x-2 gap-y-1 text-[11px] text-muted sm:justify-end">
+            <div className="mt-5 flex items-end justify-between gap-4 border-t border-line pt-4">
+              <ul className="flex min-w-0 flex-wrap gap-x-3 gap-y-1 text-xs text-muted">
                 {project.stack.map((tech) => (
                   <li key={tech}>{tech}</li>
                 ))}
               </ul>
+
               {project.repo ? (
                 <a
                   href={project.repo}
                   target="_blank"
                   rel="noreferrer"
-                  className="text-sm text-amber hover:underline"
+                  aria-label={`${project.name} on GitHub`}
+                  className="shrink-0 text-muted transition-colors hover:text-amber"
                 >
-                  View repo
+                  <GithubIcon className="h-4 w-4" />
                 </a>
               ) : (
-                <StatusFlag label={project.status ?? "No public repo"} />
+                <span className="shrink-0 text-xs text-muted">
+                  {project.status ?? "No public repo"}
+                </span>
               )}
             </div>
           </li>
