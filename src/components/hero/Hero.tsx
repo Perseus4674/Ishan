@@ -22,11 +22,11 @@ export function Hero() {
           transition={{ duration: 0.6, ease: "easeOut" }}
           className="max-w-xl"
         >
-          <h1 className="font-heading text-5xl text-head sm:text-6xl">
+          <h1 className="font-display text-6xl leading-[1.05] text-head sm:text-7xl">
             Ishan Jain
           </h1>
 
-          <p className="mt-5 font-heading text-2xl text-text sm:text-3xl">
+          <p className="mt-5 text-2xl text-text sm:text-3xl">
             I build systems that don&rsquo;t forget.
           </p>
 

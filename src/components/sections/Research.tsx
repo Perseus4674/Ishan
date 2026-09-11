@@ -8,11 +8,11 @@ export function Research() {
       <SectionHeading id="research-heading">Research</SectionHeading>
 
       <article className="rounded-xl border border-line bg-panel p-6 sm:p-8 md:p-10">
-        <span className="mb-3 inline-block w-fit rounded-full border border-line-2 px-3 py-1 font-mono text-xs text-head">
+        <span className="mb-3 inline-block w-fit rounded-full border border-line-2 px-3 py-1 text-xs text-head">
           {research.status}
         </span>
 
-        <h3 className="font-heading text-2xl font-semibold text-head">
+        <h3 className="text-2xl font-semibold text-head">
           {research.heading}
         </h3>
 
@@ -20,7 +20,7 @@ export function Research() {
 
         <BulletList items={research.points} className="mt-5" />
 
-        <ul className="mt-6 flex flex-wrap gap-x-4 gap-y-1 font-mono text-xs text-muted">
+        <ul className="mt-6 flex flex-wrap gap-x-4 gap-y-1 text-xs text-muted">
           {research.stack.map((tech) => (
             <li key={tech}>{tech}</li>
           ))}

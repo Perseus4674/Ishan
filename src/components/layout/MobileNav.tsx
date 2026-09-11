@@ -70,7 +70,7 @@ export function MobileNav({ open, onClose, activeId }: MobileNavProps) {
       className="fixed inset-0 z-[60] bg-void md:hidden"
     >
       <div className="content-width flex h-16 items-center justify-between px-4 sm:px-6">
-        <span className="font-heading text-sm font-semibold text-head">menu</span>
+        <span className="text-sm font-semibold text-head">menu</span>
         <button
           ref={closeButtonRef}
           type="button"
@@ -94,7 +94,7 @@ export function MobileNav({ open, onClose, activeId }: MobileNavProps) {
                   href={`/#${link.id}`}
                   onClick={onClose}
                   aria-current={isActive ? "true" : undefined}
-                  className={`block border-b border-line py-4 font-heading text-2xl ${
+                  className={`block border-b border-line py-4 text-2xl ${
                     isActive ? "text-amber" : "text-head"
                   }`}
                 >

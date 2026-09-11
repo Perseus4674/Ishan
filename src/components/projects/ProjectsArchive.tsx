@@ -37,7 +37,7 @@ export function ProjectsArchive() {
               type="button"
               aria-pressed={isActive}
               onClick={() => toggleTag(tag)}
-              className={`rounded-full border px-3 py-1.5 font-mono text-xs transition-colors ${
+              className={`rounded-full border px-3 py-1.5 text-xs transition-colors ${
                 isActive
                   ? "border-amber bg-amber/10 text-amber"
                   : "border-line-2 text-muted hover:text-text"
@@ -51,14 +51,14 @@ export function ProjectsArchive() {
           <button
             type="button"
             onClick={() => setActiveTags([])}
-            className="rounded-full px-3 py-1.5 font-mono text-xs text-muted hover:text-text"
+            className="rounded-full px-3 py-1.5 text-xs text-muted hover:text-text"
           >
             clear
           </button>
         )}
       </div>
 
-      <p aria-live="polite" className="mt-4 font-mono text-xs text-muted">
+      <p aria-live="polite" className="mt-4 text-xs text-muted">
         {visibleProjects.length} of {projects.length} projects
       </p>
 
@@ -66,11 +66,11 @@ export function ProjectsArchive() {
         {visibleProjects.map((project) => (
           <li key={project.slug} className="flex flex-col gap-3 py-6 sm:flex-row sm:items-start sm:gap-8">
             <div className="sm:w-48 sm:flex-shrink-0">
-              <h3 className="font-heading text-base font-semibold text-head">
+              <h3 className="text-base font-semibold text-head">
                 {project.name}
               </h3>
               {project.featured && (
-                <span className="mt-1 inline-block font-mono text-[11px] text-amber">
+                <span className="mt-1 inline-block text-[11px] text-amber">
                   featured
                 </span>
               )}
@@ -79,7 +79,7 @@ export function ProjectsArchive() {
             <p className="flex-1 text-sm leading-relaxed text-muted">{project.blurb}</p>
 
             <div className="flex flex-col items-start gap-2 sm:w-40 sm:flex-shrink-0 sm:items-end">
-              <ul className="flex flex-wrap gap-x-2 gap-y-1 font-mono text-[11px] text-muted sm:justify-end">
+              <ul className="flex flex-wrap gap-x-2 gap-y-1 text-[11px] text-muted sm:justify-end">
                 {project.stack.map((tech) => (
                   <li key={tech}>{tech}</li>
                 ))}

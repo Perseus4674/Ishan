@@ -11,7 +11,7 @@
   --color-muted: #8189a3;
   --color-amber: #e4b363;
 
-  --font-heading: var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-instrument-serif), ui-serif, Georgia, serif;
   --font-body: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   --font-mono: var(--font-jetbrains-mono), ui-monospace, "SFMono-Regular", monospace;
 
@@ -38,7 +38,6 @@
   h2,
   h3,
   h4 {
-    font-family: var(--font-heading);
     color: var(--color-head);
   }
 

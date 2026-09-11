@@ -21,7 +21,7 @@ export function Nav() {
       <div className="content-width flex h-16 items-center justify-between px-4 sm:px-6">
         <Link
           href="/#hero"
-          className="font-heading text-sm font-semibold tracking-wide text-head"
+          className="text-sm font-semibold tracking-wide text-head"
         >
           Ishan Jain
         </Link>

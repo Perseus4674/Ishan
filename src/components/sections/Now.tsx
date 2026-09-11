@@ -11,13 +11,13 @@ export function Now() {
         {nowEntries.map((entry) => (
           <li key={entry.id} className="py-8 first:pt-0">
             <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
-              <span className="font-mono text-xs uppercase tracking-wider text-muted">
+              <span className="text-xs text-muted">
                 {entry.label}
               </span>
-              <span className="font-mono text-xs text-muted">{entry.timeframe}</span>
+              <span className="text-xs text-muted">{entry.timeframe}</span>
             </div>
 
-            <h3 className="mt-2 font-heading text-lg font-semibold text-head">
+            <h3 className="mt-2 text-lg font-semibold text-head">
               {entry.heading}
             </h3>
 

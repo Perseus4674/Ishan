@@ -15,14 +15,14 @@ export function About() {
           ))}
 
           <div className="mt-10">
-            <h3 className="mb-4 font-mono text-xs uppercase tracking-wider text-muted">
+            <h3 className="mb-4 text-xs text-muted">
               core stack
             </h3>
             <div className="grid grid-cols-2 gap-x-8 gap-y-2 max-w-sm">
               {aboutCopy.coreTech.map((column, i) => (
                 <ul key={i} className="space-y-2">
                   {column.map((tech) => (
-                    <li key={tech} className="font-mono text-sm text-muted">
+                    <li key={tech} className="text-sm text-muted">
                       {tech}
                     </li>
                   ))}
@@ -33,13 +33,13 @@ export function About() {
         </div>
 
         <aside className="rounded-lg border border-line bg-panel p-6">
-          <h3 className="mb-4 font-heading text-sm font-semibold text-head">
+          <h3 className="mb-4 text-sm font-semibold text-head">
             at a glance
           </h3>
           <dl className="space-y-4">
             {aboutCopy.atAGlance.map((item) => (
               <div key={item.label}>
-                <dt className="font-mono text-xs uppercase tracking-wider text-muted">
+                <dt className="text-xs text-muted">
                   {item.label}
                 </dt>
                 <dd className="mt-1 text-sm text-text">{item.value}</dd>
