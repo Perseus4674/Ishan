@@ -85,7 +85,10 @@ export function PerseusCanvas() {
 
     function layoutHomes() {
       const size = Math.min(width, height) * 0.74;
-      const offsetX = (width - size) / 2;
+      // On a wide canvas the constellation sits behind overlaid hero text, so
+      // bias it toward the right and leave the reading column clear.
+      const anchorX = width / height > 1.3 ? 0.68 : 0.5;
+      const offsetX = (width - size) * anchorX;
       const offsetY = (height - size) / 2;
 
       stars.forEach((star, i) => {
@@ -118,10 +121,22 @@ export function PerseusCanvas() {
 
     const pointer = { x: -9999, y: -9999, active: false };
 
+    // Tracked on the window rather than the canvas so the stars still react
+    // when the pointer is over text overlaying them, without the overlay
+    // having to disable pointer events (which would make the text unselectable).
     function onPointerMove(event: PointerEvent) {
       const rect = canvas!.getBoundingClientRect();
-      pointer.x = event.clientX - rect.left;
-      pointer.y = event.clientY - rect.top;
+      const x = event.clientX - rect.left;
+      const y = event.clientY - rect.top;
+      const inside = x >= 0 && x <= rect.width && y >= 0 && y <= rect.height;
+
+      if (!inside) {
+        onPointerLeave();
+        return;
+      }
+
+      pointer.x = x;
+      pointer.y = y;
       pointer.active = true;
     }
 
@@ -232,15 +247,15 @@ export function PerseusCanvas() {
     resize();
 
     if (!reducedMotion) {
-      canvas.addEventListener("pointermove", onPointerMove);
-      canvas.addEventListener("pointerleave", onPointerLeave);
+      window.addEventListener("pointermove", onPointerMove);
+      document.addEventListener("pointerleave", onPointerLeave);
       raf = requestAnimationFrame(tick);
     }
 
     return () => {
       ro.disconnect();
-      canvas.removeEventListener("pointermove", onPointerMove);
-      canvas.removeEventListener("pointerleave", onPointerLeave);
+      window.removeEventListener("pointermove", onPointerMove);
+      document.removeEventListener("pointerleave", onPointerLeave);
       if (raf) cancelAnimationFrame(raf);
     };
   }, [reducedMotion]);
