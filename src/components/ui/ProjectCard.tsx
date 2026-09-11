@@ -7,7 +7,7 @@ export function ProjectCard({ project }: { project: Project }) {
       <h3 className="font-heading text-lg font-semibold text-head">{project.name}</h3>
       <p className="mt-3 flex-1 text-sm leading-relaxed text-muted">{project.blurb}</p>
 
-      <ul className="mt-4 flex flex-wrap gap-x-3 gap-y-1 font-mono text-xs text-dim">
+      <ul className="mt-4 flex flex-wrap gap-x-3 gap-y-1 font-mono text-xs text-muted">
         {project.stack.map((tech) => (
           <li key={tech}>{tech}</li>
         ))}

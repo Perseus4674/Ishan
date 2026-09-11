@@ -15,7 +15,7 @@ export function About() {
           ))}
 
           <div className="mt-10">
-            <h3 className="mb-4 font-mono text-xs uppercase tracking-wider text-dim">
+            <h3 className="mb-4 font-mono text-xs uppercase tracking-wider text-muted">
               core stack
             </h3>
             <div className="grid grid-cols-2 gap-x-8 gap-y-2 max-w-sm">
@@ -39,7 +39,7 @@ export function About() {
           <dl className="space-y-4">
             {aboutCopy.atAGlance.map((item) => (
               <div key={item.label}>
-                <dt className="font-mono text-xs uppercase tracking-wider text-dim">
+                <dt className="font-mono text-xs uppercase tracking-wider text-muted">
                   {item.label}
                 </dt>
                 <dd className="mt-1 text-sm text-text">{item.value}</dd>

@@ -51,14 +51,14 @@ export function ProjectsArchive() {
           <button
             type="button"
             onClick={() => setActiveTags([])}
-            className="rounded-full px-3 py-1.5 font-mono text-xs text-dim hover:text-text"
+            className="rounded-full px-3 py-1.5 font-mono text-xs text-muted hover:text-text"
           >
             clear
           </button>
         )}
       </div>
 
-      <p aria-live="polite" className="mt-4 font-mono text-xs text-dim">
+      <p aria-live="polite" className="mt-4 font-mono text-xs text-muted">
         {visibleProjects.length} of {projects.length} projects
       </p>
 
@@ -79,7 +79,7 @@ export function ProjectsArchive() {
             <p className="flex-1 text-sm leading-relaxed text-muted">{project.blurb}</p>
 
             <div className="flex flex-col items-start gap-2 sm:w-40 sm:flex-shrink-0 sm:items-end">
-              <ul className="flex flex-wrap gap-x-2 gap-y-1 font-mono text-[11px] text-dim sm:justify-end">
+              <ul className="flex flex-wrap gap-x-2 gap-y-1 font-mono text-[11px] text-muted sm:justify-end">
                 {project.stack.map((tech) => (
                   <li key={tech}>{tech}</li>
                 ))}

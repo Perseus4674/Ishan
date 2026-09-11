@@ -10,7 +10,7 @@ export function FeaturedCard({ project }: { project: Project }) {
         <h3 className="font-heading text-2xl font-semibold text-head">{project.name}</h3>
         <p className="mt-4 leading-relaxed text-text">{project.blurb}</p>
 
-        <ul className="mt-5 flex flex-wrap gap-x-4 gap-y-1 font-mono text-xs text-dim">
+        <ul className="mt-5 flex flex-wrap gap-x-4 gap-y-1 font-mono text-xs text-muted">
           {project.stack.map((tech) => (
             <li key={tech}>{tech}</li>
           ))}

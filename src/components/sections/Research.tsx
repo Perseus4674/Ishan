@@ -26,13 +26,13 @@ export function Research() {
           ))}
         </ul>
 
-        <ul className="mt-6 flex flex-wrap gap-x-4 gap-y-1 font-mono text-xs text-dim">
+        <ul className="mt-6 flex flex-wrap gap-x-4 gap-y-1 font-mono text-xs text-muted">
           {research.stack.map((tech) => (
             <li key={tech}>{tech}</li>
           ))}
         </ul>
 
-        <p className="mt-6 text-sm text-dim">{research.closing}</p>
+        <p className="mt-6 text-sm text-muted">{research.closing}</p>
       </article>
     </section>
   );

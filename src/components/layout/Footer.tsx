@@ -4,7 +4,7 @@ import { GithubIcon, LinkedinIcon, MailIcon } from "@/components/ui/SocialIcons"
 export function Footer() {
   return (
     <footer className="border-t border-line">
-      <div className="content-width flex flex-col items-center gap-4 px-4 py-10 text-sm text-dim sm:flex-row sm:justify-between sm:px-6">
+      <div className="content-width flex flex-col items-center gap-4 px-4 py-10 text-sm text-muted sm:flex-row sm:justify-between sm:px-6">
         <p>&copy; {new Date().getFullYear()} ishan jain. built with next.js, not a template.</p>
 
         <div className="flex items-center gap-5">
