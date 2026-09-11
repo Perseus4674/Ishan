@@ -1,10 +1,10 @@
 export function SectionHeading({ children, id }: { children: string; id?: string }) {
   return (
-    <div className="mb-10 flex items-center gap-4">
-      <h2 id={id} className="whitespace-nowrap font-heading text-2xl font-semibold text-head sm:text-3xl">
-        <span className="text-amber">/</span> {children}
+    <div className="mb-10">
+      <span className="block h-px w-full bg-line" aria-hidden="true" />
+      <h2 id={id} className="mt-6 font-heading text-3xl text-head sm:text-4xl">
+        {children}
       </h2>
-      <span className="h-px flex-1 bg-line" aria-hidden="true" />
     </div>
   );
 }

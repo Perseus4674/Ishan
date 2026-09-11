@@ -4,7 +4,7 @@ import { aboutCopy } from "@/content/profile";
 export function About() {
   return (
     <section id="about" aria-labelledby="about-heading" className="content-width px-4 py-20 sm:px-6">
-      <SectionHeading id="about-heading">about me</SectionHeading>
+      <SectionHeading id="about-heading">About</SectionHeading>
 
       <div className="grid gap-12 md:grid-cols-[1fr_300px] md:gap-16">
         <div>

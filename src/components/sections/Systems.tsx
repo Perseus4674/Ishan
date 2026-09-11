@@ -7,7 +7,7 @@ import { talos, nonFeaturedProjects } from "@/content/projects";
 export function Systems() {
   return (
     <section id="systems" aria-labelledby="systems-heading" className="content-width px-4 py-20 sm:px-6">
-      <SectionHeading id="systems-heading">systems</SectionHeading>
+      <SectionHeading id="systems-heading">Systems</SectionHeading>
 
       <FeaturedCard project={talos} />
 

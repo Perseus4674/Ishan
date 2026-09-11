@@ -17,7 +17,7 @@ export default function ProjectsPage() {
       </Link>
 
       <div className="mt-6">
-        <SectionHeading id="projects-heading">projects</SectionHeading>
+        <SectionHeading id="projects-heading">Projects</SectionHeading>
       </div>
 
       <p className="max-w-prose leading-relaxed text-muted">

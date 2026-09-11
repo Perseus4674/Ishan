@@ -4,7 +4,7 @@ import { profile } from "@/content/profile";
 export function Contact() {
   return (
     <section id="contact" aria-labelledby="contact-heading" className="content-width px-4 py-20 sm:px-6">
-      <SectionHeading id="contact-heading">contact</SectionHeading>
+      <SectionHeading id="contact-heading">Contact</SectionHeading>
 
       <div className="mx-auto max-w-md text-center">
         <h3 className="font-heading text-2xl font-semibold text-head sm:text-3xl">

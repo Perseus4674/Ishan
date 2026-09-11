@@ -41,7 +41,7 @@ export function Now() {
 
   return (
     <section id="now" aria-labelledby="now-heading" className="content-width px-4 py-20 sm:px-6">
-      <SectionHeading id="now-heading">what i&rsquo;m doing now</SectionHeading>
+      <SectionHeading id="now-heading">Now</SectionHeading>
 
       <div className="flex flex-col gap-8 md:flex-row md:gap-12">
         <div

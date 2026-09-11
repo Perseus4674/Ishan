@@ -4,7 +4,7 @@ import { worldsCards } from "@/content/worlds";
 export function Worlds() {
   return (
     <section id="worlds" aria-labelledby="worlds-heading" className="content-width px-4 py-20 sm:px-6">
-      <SectionHeading id="worlds-heading">worlds</SectionHeading>
+      <SectionHeading id="worlds-heading">Worlds</SectionHeading>
 
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
         {worldsCards.map((card) => (
