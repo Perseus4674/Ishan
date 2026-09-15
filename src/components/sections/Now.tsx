@@ -7,7 +7,7 @@ export function Now() {
       <div className="content-width px-4 pb-8 pt-14 sm:px-6">
         <SectionHeading id="now-heading">Now</SectionHeading>
 
-        <ul className="divide-y divide-line">
+        <ul className="max-w-3xl divide-y divide-line">
           {nowEntries.map((entry) => (
             <li key={entry.id} className="py-6 first:pt-0">
               <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">

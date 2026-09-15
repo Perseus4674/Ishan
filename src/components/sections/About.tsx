@@ -7,7 +7,7 @@ export function About() {
       <div className="content-width px-4 py-14 sm:px-6">
         <SectionHeading id="about-heading">About</SectionHeading>
 
-        <div className="grid gap-12 md:grid-cols-[1fr_300px] md:gap-16">
+        <div className="grid gap-12 md:grid-cols-[minmax(0,42rem)_320px] md:gap-16">
           <div>
             {aboutCopy.paragraphs.map((paragraph) => (
               <p key={paragraph} className="mb-5 max-w-prose leading-relaxed text-text last:mb-0">
