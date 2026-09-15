@@ -3,7 +3,7 @@ import { GithubIcon } from "@/components/ui/SocialIcons";
 
 export function ProjectCard({ project }: { project: Project }) {
   return (
-    <article className="flex h-full flex-col rounded-lg border border-line bg-panel p-6 transition-colors hover:border-line-2">
+    <article className="glass flex h-full flex-col rounded-lg p-6">
       <h3 className="text-lg font-semibold text-head">{project.name}</h3>
       <p className="mt-3 flex-1 text-sm leading-relaxed text-muted">{project.blurb}</p>
 
@@ -20,7 +20,7 @@ export function ProjectCard({ project }: { project: Project }) {
             target="_blank"
             rel="noreferrer"
             aria-label={`${project.name} on GitHub`}
-            className="shrink-0 text-muted transition-colors hover:text-amber"
+            className="shrink-0 text-muted transition-colors hover:text-accent"
           >
             <GithubIcon className="h-4 w-4" />
           </a>

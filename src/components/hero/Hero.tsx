@@ -15,7 +15,7 @@ export function Hero() {
         <PerseusCanvas />
       </div>
 
-      <div className="content-width relative px-4 pb-20 pt-10 sm:px-6 md:flex md:min-h-[620px] md:flex-col md:justify-center md:pb-28 md:pt-24">
+      <div className="content-width relative px-4 pb-14 pt-10 sm:px-6 md:flex md:min-h-[620px] md:flex-col md:justify-center md:pb-16 md:pt-24">
         <motion.div
           initial={reducedMotion ? false : { opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
@@ -39,7 +39,7 @@ export function Hero() {
           <div className="mt-9">
             <a
               href={`mailto:${profile.links.email}`}
-              className="inline-flex items-center rounded-full border border-line-2 px-6 py-2.5 text-sm text-amber transition-colors hover:border-amber"
+              className="inline-flex items-center rounded-full border border-line-2 px-6 py-2.5 text-sm text-accent transition-colors hover:border-accent"
             >
               Say hi
             </a>

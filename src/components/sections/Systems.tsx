@@ -6,8 +6,8 @@ import { talos, nonFeaturedProjects } from "@/content/projects";
 
 export function Systems() {
   return (
-    <section id="systems" aria-labelledby="systems-heading" className="bg-deep">
-      <div className="content-width px-4 py-20 sm:px-6">
+    <section id="systems" aria-labelledby="systems-heading">
+      <div className="content-width px-4 py-14 sm:px-6">
         <SectionHeading id="systems-heading">Systems</SectionHeading>
 
         <FeaturedCard project={talos} />
@@ -19,7 +19,7 @@ export function Systems() {
         </div>
 
         <div className="mt-8">
-          <Link href="/projects" className="text-sm text-amber hover:underline">
+          <Link href="/projects" className="text-sm text-accent hover:underline">
             View all projects
           </Link>
         </div>

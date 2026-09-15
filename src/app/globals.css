@@ -1,15 +1,15 @@
 @import "tailwindcss";
 
 @theme {
-  --color-void: #05060b;
-  --color-deep: #0a0c16;
-  --color-panel: #101322;
-  --color-line: #1c2033;
-  --color-line-2: #2a3050;
-  --color-text: #c8cedf;
-  --color-head: #f2f4fb;
-  --color-muted: #8189a3;
-  --color-amber: #e4b363;
+  --color-bg: #0d0b10;
+  --color-panel: #16131c;
+  --color-panel-h: #1c1824;
+  --color-line: #241f2e;
+  --color-line-2: #332c42;
+  --color-text: #dcd6e4;
+  --color-head: #f4f1f7;
+  --color-muted: #8a82a0;
+  --color-accent: #c4a6ff;
 
   --font-display: var(--font-instrument-serif), ui-serif, Georgia, serif;
   --font-body: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
@@ -29,7 +29,7 @@
   }
 
   body {
-    background: var(--color-void);
+    background: var(--color-bg);
     color: var(--color-text);
     font-family: var(--font-body);
   }
@@ -42,7 +42,7 @@
   }
 
   :focus-visible {
-    outline: 2px solid var(--color-amber);
+    outline: 2px solid var(--color-accent);
     outline-offset: 3px;
     border-radius: 2px;
   }
@@ -65,7 +65,104 @@
 
 @layer utilities {
   .content-width {
-    max-width: 1080px;
+    max-width: 1240px;
     margin-inline: auto;
+  }
+}
+
+@layer components {
+  /* Glass card surface shared by cards, the "at a glance" box, and the nav.
+     Thin, backdrop-forward fill with a directional edge (bright top/left,
+     dim bottom/right) plus an inset highlight — the combination that reads
+     as glass rather than a flat tinted panel. */
+  .glass {
+    /* Local override: muted text sitting on the brighter, thinner glass
+       needs more headroom than muted-on-bare-background does. --color-muted
+       stays #8A82A0 everywhere outside .glass; this cascades to any
+       text-muted usage inside a card without touching component markup. */
+    --color-muted: #9a93ad;
+    background: rgba(22, 19, 28, 0.28);
+    backdrop-filter: blur(16px) saturate(1.15);
+    -webkit-backdrop-filter: blur(16px) saturate(1.15);
+    border-top: 1px solid rgba(196, 166, 255, 0.16);
+    border-left: 1px solid rgba(196, 166, 255, 0.1);
+    border-right: 1px solid rgba(51, 44, 66, 0.5);
+    border-bottom: 1px solid rgba(51, 44, 66, 0.5);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    transition:
+      background-color 0.25s ease,
+      border-color 0.25s ease;
+  }
+
+  .glass:hover {
+    background: rgba(22, 19, 28, 0.2);
+    border-top-color: rgba(196, 166, 255, 0.28);
+    border-left-color: rgba(196, 166, 255, 0.2);
+    border-right-color: rgba(220, 214, 228, 0.28);
+    border-bottom-color: rgba(220, 214, 228, 0.28);
+  }
+
+  @supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+    .glass {
+      background: var(--color-panel-h);
+      border: 1px solid var(--color-line-2);
+      box-shadow: none;
+    }
+  }
+}
+
+/* Fixed, full-viewport ambient backdrop: large, clearly-visible soft glows —
+   meant to read on the bare background on their own, not just as a tint
+   glimpsed through glass — plus a hairline grain pass to break up banding.
+   Anchored to fixed offsets from viewport-centre (not viewport-edge
+   percentages) so on wide screens the glows stay bound to the centred
+   content column, where the cards actually are, instead of drifting out
+   into the side margins. */
+.ambient-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.ambient-backdrop::before {
+  content: "";
+  position: absolute;
+  inset: -15%;
+  background:
+    radial-gradient(circle 40vmax at calc(50% - 320px) 22%, rgba(196, 166, 255, 0.18) 0%, transparent 70%),
+    radial-gradient(circle 38vmax at calc(50% + 300px) 16%, rgba(108, 92, 231, 0.16) 0%, transparent 70%),
+    radial-gradient(circle 42vmax at calc(50% - 280px) 78%, rgba(196, 166, 255, 0.15) 0%, transparent 70%),
+    radial-gradient(circle 38vmax at calc(50% + 340px) 82%, rgba(108, 92, 231, 0.17) 0%, transparent 70%);
+  filter: blur(90px);
+  animation: ambient-drift 90s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+.ambient-backdrop::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  mix-blend-mode: overlay;
+}
+
+@keyframes ambient-drift {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(-3%, 2.5%, 0) scale(1.06);
+  }
+  100% {
+    transform: translate3d(2.5%, -3%, 0) scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ambient-backdrop::before {
+    animation: none;
   }
 }

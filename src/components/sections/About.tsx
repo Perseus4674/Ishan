@@ -3,8 +3,8 @@ import { aboutCopy } from "@/content/profile";
 
 export function About() {
   return (
-    <section id="about" aria-labelledby="about-heading" className="bg-deep">
-      <div className="content-width px-4 py-20 sm:px-6">
+    <section id="about" aria-labelledby="about-heading">
+      <div className="content-width px-4 py-14 sm:px-6">
         <SectionHeading id="about-heading">About</SectionHeading>
 
         <div className="grid gap-12 md:grid-cols-[1fr_300px] md:gap-16">
@@ -33,7 +33,7 @@ export function About() {
             </div>
           </div>
 
-          <aside className="rounded-lg border border-line bg-panel p-6">
+          <aside className="glass rounded-lg p-6">
             <h3 className="mb-4 text-sm font-semibold text-head">
               At a glance
             </h3>

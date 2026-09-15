@@ -17,7 +17,7 @@ export function Nav() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-line bg-void/85 backdrop-blur">
+    <header className="glass sticky top-0 z-50">
       <div className="content-width flex h-16 items-center justify-between px-4 sm:px-6">
         <Link
           href="/#hero"
@@ -35,8 +35,8 @@ export function Nav() {
                   <Link
                     href={`/#${link.id}`}
                     aria-current={isActive ? "true" : undefined}
-                    className={`text-sm transition-colors hover:text-amber ${
-                      isActive ? "text-amber" : "text-muted"
+                    className={`text-sm transition-colors hover:text-accent ${
+                      isActive ? "text-accent" : "text-muted"
                     }`}
                   >
                     {link.label}
@@ -52,7 +52,7 @@ export function Nav() {
               target="_blank"
               rel="noreferrer"
               aria-label="Ishan's GitHub"
-              className="text-muted transition-colors hover:text-amber"
+              className="text-muted transition-colors hover:text-accent"
             >
               <GithubIcon className="h-5 w-5" />
             </a>
@@ -61,14 +61,14 @@ export function Nav() {
               target="_blank"
               rel="noreferrer"
               aria-label="Ishan's LinkedIn"
-              className="text-muted transition-colors hover:text-amber"
+              className="text-muted transition-colors hover:text-accent"
             >
               <LinkedinIcon className="h-5 w-5" />
             </a>
             <a
               href={`mailto:${profile.links.email}`}
               aria-label="Email Ishan"
-              className="text-muted transition-colors hover:text-amber"
+              className="text-muted transition-colors hover:text-accent"
             >
               <MailIcon className="h-5 w-5" />
             </a>

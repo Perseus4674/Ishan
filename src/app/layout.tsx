@@ -57,7 +57,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#05060b",
+  themeColor: "#0d0b10",
   width: "device-width",
   initialScale: 1,
 };
@@ -69,7 +69,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${instrumentSerif.variable} ${inter.variable} ${jetbrainsMono.variable}`}>
-      <body className="bg-void text-text antialiased">
+      <body className="bg-bg text-text antialiased">
+        <div className="ambient-backdrop" aria-hidden="true" />
         <SkipLink />
         <Nav />
         <main id="main-content" tabIndex={-1}>

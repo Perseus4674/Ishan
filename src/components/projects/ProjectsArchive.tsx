@@ -39,7 +39,7 @@ export function ProjectsArchive() {
               onClick={() => toggleTag(tag)}
               className={`rounded-full border px-3 py-1.5 text-xs transition-colors ${
                 isActive
-                  ? "border-amber bg-amber/10 text-amber"
+                  ? "border-accent bg-accent/10 text-accent"
                   : "border-line-2 text-muted hover:text-text"
               }`}
             >
@@ -70,7 +70,7 @@ export function ProjectsArchive() {
                 {project.name}
               </h3>
               {project.featured && (
-                <span className="text-[11px] text-amber">Featured</span>
+                <span className="text-[11px] text-accent">Featured</span>
               )}
             </div>
 
@@ -91,7 +91,7 @@ export function ProjectsArchive() {
                   target="_blank"
                   rel="noreferrer"
                   aria-label={`${project.name} on GitHub`}
-                  className="shrink-0 text-muted transition-colors hover:text-amber"
+                  className="shrink-0 text-muted transition-colors hover:text-accent"
                 >
                   <GithubIcon className="h-4 w-4" />
                 </a>

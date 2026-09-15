@@ -4,7 +4,7 @@ import { profile } from "@/content/profile";
 export function Contact() {
   return (
     <section id="contact" aria-labelledby="contact-heading">
-      <div className="content-width px-4 py-20 sm:px-6">
+      <div className="content-width px-4 py-14 sm:px-6">
         <SectionHeading id="contact-heading">Contact</SectionHeading>
 
         <div className="max-w-xl">
@@ -18,7 +18,7 @@ export function Contact() {
           </p>
           <a
             href={`mailto:${profile.links.email}`}
-            className="mt-8 inline-flex items-center rounded-full border border-line-2 px-8 py-4 text-base text-amber transition-colors hover:border-amber"
+            className="mt-8 inline-flex items-center rounded-full border border-line-2 px-8 py-4 text-base text-accent transition-colors hover:border-accent"
           >
             Say hi
           </a>

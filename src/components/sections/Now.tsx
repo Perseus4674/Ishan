@@ -4,7 +4,7 @@ import { nowEntries } from "@/content/now";
 export function Now() {
   return (
     <section id="now" aria-labelledby="now-heading">
-      <div className="content-width px-4 py-20 sm:px-6">
+      <div className="content-width px-4 pb-8 pt-14 sm:px-6">
         <SectionHeading id="now-heading">Now</SectionHeading>
 
         <ul className="divide-y divide-line">

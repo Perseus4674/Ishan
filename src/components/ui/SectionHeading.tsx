@@ -1,7 +1,20 @@
+"use client";
+
+import { motion, useReducedMotion } from "framer-motion";
+
 export function SectionHeading({ children, id }: { children: string; id?: string }) {
+  const reducedMotion = useReducedMotion();
+
   return (
-    <h2 id={id} className="mb-10 font-display text-3xl text-head sm:text-4xl">
+    <motion.h2
+      id={id}
+      initial={reducedMotion ? false : { opacity: 0, y: 16 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-15% 0px -15% 0px" }}
+      transition={{ duration: 0.9, ease: "easeOut" }}
+      className="mb-10 font-display text-3xl text-head sm:text-4xl"
+    >
       {children}
-    </h2>
+    </motion.h2>
   );
 }

@@ -67,7 +67,7 @@ export function MobileNav({ open, onClose, activeId }: MobileNavProps) {
       aria-modal="true"
       aria-label="site navigation"
       hidden={!open}
-      className="fixed inset-0 z-[60] bg-void md:hidden"
+      className="fixed inset-0 z-[60] bg-bg md:hidden"
     >
       <div className="content-width flex h-16 items-center justify-between px-4 sm:px-6">
         <span className="text-sm font-semibold text-head">Menu</span>
@@ -95,7 +95,7 @@ export function MobileNav({ open, onClose, activeId }: MobileNavProps) {
                   onClick={onClose}
                   aria-current={isActive ? "true" : undefined}
                   className={`block border-b border-line py-4 text-2xl ${
-                    isActive ? "text-amber" : "text-head"
+                    isActive ? "text-accent" : "text-head"
                   }`}
                 >
                   {link.label}
@@ -111,7 +111,7 @@ export function MobileNav({ open, onClose, activeId }: MobileNavProps) {
             target="_blank"
             rel="noreferrer"
             aria-label="Ishan's GitHub"
-            className="text-muted hover:text-amber"
+            className="text-muted hover:text-accent"
           >
             <GithubIcon className="h-6 w-6" />
           </a>
@@ -120,14 +120,14 @@ export function MobileNav({ open, onClose, activeId }: MobileNavProps) {
             target="_blank"
             rel="noreferrer"
             aria-label="Ishan's LinkedIn"
-            className="text-muted hover:text-amber"
+            className="text-muted hover:text-accent"
           >
             <LinkedinIcon className="h-6 w-6" />
           </a>
           <a
             href={`mailto:${profile.links.email}`}
             aria-label="Email Ishan"
-            className="text-muted hover:text-amber"
+            className="text-muted hover:text-accent"
           >
             <MailIcon className="h-6 w-6" />
           </a>
