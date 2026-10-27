@@ -38,12 +38,12 @@ export const metadata: Metadata = {
     template: "%s · Ishan Jain",
   },
   description:
-    "Ishan Jain builds AI systems with real memory — Talos, a self-hosted AI operating system, plus ML, research, and full-stack freelance work. CS student at Manipal University Jaipur.",
+    "Ishan Jain builds AI systems with real memory — Talos, a self-hosted AI operating system, plus ML and research work. CS student at Manipal University Jaipur.",
   authors: [{ name: "Ishan Jain", url: "https://github.com/Perseus4674" }],
   openGraph: {
     title: "Ishan Jain — Systems that remember",
     description:
-      "Talos, a self-hosted AI operating system, plus ML, research, and full-stack freelance work.",
+      "Talos, a self-hosted AI operating system, plus ML and research work.",
     url: "/",
     siteName: "Ishan Jain",
     type: "website",
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Ishan Jain — Systems that remember",
     description:
-      "Talos, a self-hosted AI operating system, plus ML, research, and full-stack freelance work.",
+      "Talos, a self-hosted AI operating system, plus ML and research work.",
   },
 };
 

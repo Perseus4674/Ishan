@@ -7,6 +7,5 @@ export const research = {
     "Strict temporal validation, no imputation drawing on data after the prediction point",
     "Architecture and preprocessing decisions documented for reproduction, not just for the headline number",
   ],
-  stack: ["PyTorch", "MIMIC-IV", "temporal fusion architectures", "pytest"],
-  closing: "Methodology and current results available on request.",
+  stack: ["PyTorch", "temporal fusion architectures", "pytest"],
 };

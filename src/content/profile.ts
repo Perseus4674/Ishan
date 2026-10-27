@@ -19,7 +19,7 @@ export const aboutCopy = {
   paragraphs: [
     "I'm a third-year computer science student at Manipal University Jaipur, specialising in data science. Most of what I build comes back to the same idea: state. Most AI tooling forgets you the moment you close it — I build the kind that doesn't.",
     "I name my systems after Greek myth — Talos, Pantheon; my handle is Perseus. That's not decoration. Deciding what to call a system is how I decide what it's supposed to be.",
-    "Long-term, I want to build products, start a company, and do research worth remembering. Right now that means shipping systems that keep their memory, and freelance work for people who need a real product, not a template.",
+    "Long-term, I want to build products, start a company, and do research worth remembering. Right now that means shipping systems that keep their memory.",
   ],
   atAGlance: [
     { label: "Based in", value: profile.location },

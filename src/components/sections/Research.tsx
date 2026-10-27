@@ -29,8 +29,6 @@ export function Research() {
               <li key={tech}>{tech}</li>
             ))}
           </ul>
-
-          <p className="mt-6 text-sm text-muted">{research.closing}</p>
         </article>
       </div>
     </section>

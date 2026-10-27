@@ -13,7 +13,7 @@ export const talos: Project = {
   slug: "talos",
   name: "Talos",
   blurb:
-    "A self-hosted AI operating system rather than a chat window. Runs locally, keeps everything it learns, exposes the same brain through two interfaces that share one state — close either and nothing is lost.",
+    "A self-hosted AI operating system rather than a chat window. Memory and state stay on your machine; the model and speech run through APIs. Keeps everything it learns, exposes the same brain through two interfaces that share one state — close either and nothing is lost.",
   stack: ["Python", "ChromaDB", "SQLite", "Textual", "Streamlit", "EdgeTTS"],
   repo: "https://github.com/Perseus4674/Talos-AI-Os-showcase",
   featured: true,
@@ -40,24 +40,16 @@ export const projects: Project[] = [
     name: "Resume Screener",
     blurb:
       "Ranks resumes against a role and shows the reasoning behind every score, so a hiring manager can argue with a result instead of just accepting it.",
-    stack: ["Python", "spaCy", "scikit-learn", "Streamlit"],
+    stack: ["Python", "spaCy", "scikit-learn", "FastAPI"],
     repo: "https://github.com/Perseus4674/AI-resume-screener",
   },
   {
     slug: "investment-advisor",
     name: "Investment Advisor",
     blurb:
-      "A research assistant for Indian equities. The first build was a monolith that collapsed under dependency conflicts; this one isolates every service, with four validation layers before any claim reaches the user. Ticker resolution built for Indian listings first.",
+      "A research assistant for Indian equities. The first build was a monolith that collapsed under dependency conflicts; this one isolates every service, with four validation layers before any claim reaches the user. Ticker resolution built for Indian listings first. Includes an Account Aggregator co-pilot, a read-only tool-calling agent over sandboxed financial data.",
     stack: ["FastAPI", "LangChain", "ChromaDB", "Groq"],
     status: "In progress",
-  },
-  {
-    slug: "made-to-order-commerce",
-    name: "Made-to-Order Commerce",
-    blurb:
-      "Storefronts for craft businesses whose stock is produced rather than held, which breaks most off-the-shelf e-commerce assumptions. Admin panels built for owners who have never used one. Full source handed over, no lock-in. Case studies go up when the sites do.",
-    stack: ["Next.js", "TypeScript", "Prisma", "PostgreSQL", "Auth.js"],
-    status: "Two builds",
   },
   {
     slug: "exoscout",
@@ -75,4 +67,6 @@ export const projects: Project[] = [
   },
 ];
 
-export const nonFeaturedProjects = projects.filter((p) => !p.featured);
+export const nonFeaturedProjects = projects.filter(
+  (p) => !p.featured && p.slug !== "exoscout" && p.slug !== "predictive-maintenance"
+);

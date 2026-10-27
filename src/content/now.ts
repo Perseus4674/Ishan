@@ -18,15 +18,8 @@ export const nowEntries: NowEntry[] = [
     id: "research",
     label: "Research",
     heading: "Early warning from intensive-care records",
-    timeframe: "Ongoing",
-    line: "Mostly validation rather than modelling — making sure nothing in the pipeline sees the future before it's allowed to.",
-  },
-  {
-    id: "freelance",
-    label: "Freelance",
-    heading: "Made-to-order storefronts for craft businesses",
-    timeframe: "Ongoing",
-    line: "Two live builds so far, with admin panels designed for owners who've never run one before.",
+    timeframe: "Paused",
+    line: "Pipeline built and tested on synthetic data; paused until dataset access.",
   },
   {
     id: "university",
